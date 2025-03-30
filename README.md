@@ -24,11 +24,14 @@ This repository contains the third mandatory assignment (MA3) for AIML25.
     | Assignment | Assignment notebook | Guide notebook | Description |
     | --- | --- | --- | --- |
     | Part 1 | [assignments/rag.ipynb](assignments/rag.ipynb) | [guides/rag_guide.ipynb](guides/rag_guide.ipynb) | Retrieval-Augmented Generation |
-    | Part 2 | [assignments/agents.ipynb](assignments/agents.ipynb)| [guides/agents_guide.ipynb](guides/agents_guide.ipynb) | Agentic LLM Systems |
+    | Part 2 | [assignments/agents.ipynb](assignments/agents.ipynb)| [guides/router_agents_guide.ipynb](guides/agents_guide.ipynb)<br>[guides/tool_agents_guide.ipynb](guides/tool_agents_guide.ipynb) | Agentic LLM Systems |
 
-* **Dataset**: In the `rag_guide.ipynb` notebook, we use a single markdown document (`data/madeup_company.md`) as our external knowledge source, to simulate the very common scenario of building a RAG system with access to company information. For your assignment, you can experiment further with this dataset or use your own. It could be any PDF, website, text file etc. that you find interesting. In `agents_guide.ipynb`, we will use built tools like web search, calculator, and weather API to create a simple personal assistant agent. You are, of course, more than welcome to add any tools and knowledge sources you find interesting.
+* **Dataset**: In the `rag_guide.ipynb` notebook, we use a single markdown document (`data/madeup_company.md`) as our external knowledge source, to simulate the very common scenario of building a RAG system with access to company information. For your assignment, you can experiment further with this dataset or use your own. It could be any PDF, website, text file etc. that you find interesting. In `tool_agents_guide.ipynb`, we will use built tools like web search and RAG. You are, of course, more than welcome to add any tools and knowledge sources you find interesting.
 
-* **Using Google Colab**: The heavy compute (i.e., LLM inference and text embedding) for this assignment will all be remote via WatsonX.ai. However, as always, you are free to use Google Colab. If you do use Colab, please make sure to download the finished notebook and save it to your local machine as `ma3/assignments/<type>` before committing your code to GitHub and submitting the assignment.
+* **Local modules**:
+Some of the guide notebooks rely on `src/llm.py` for LLM inference with `instructor` and `litellm`. Please read through the [`instructor_guide.ipynb`](guides/instructor_guide.ipynb) notebook to understand how and why this can be useful. 
+
+* **Using Google Colab**: The heavy compute (i.e., LLM inference and text embedding) for this assignment will all be remote via WatsonX.ai. However, as always, you are free to use Google Colab. If you do use Colab, please make sure to download the finished notebook and save it to your local machine as `ma3/assignments/<type>` before committing your code to GitHub and submitting the assignment. We are calling `src/llm.py::LLMCaller` in the `router_agents_guide.ipynb` notebook, so you will need to copy-paste the `src/llm.py` file to your Colab environment.
 
 ## Part 1: Retrieval-Augmented Generation (RAG)
 In this part, you will implement and evaluate a simple RAG system. You will use an embedding model to vectorize your documents and an LLM for text generation. Both types of models are available through WatsonX.ai. Specifically, your task is to:
@@ -46,10 +49,10 @@ In this part, you will implement and evaluate a simple RAG system. You will use 
 ## Part 2: AI Agents
 In this part, you will implement and evaluate a simple tool-using LLM Agent using LangGraph (or any other framework you want!). Specifically, your task is to:
 
-- Explore the accompanying guide in the `guides/agents_guide.ipynb` notebook.
-- Use LangGraph to create a simple tool-using LLM Agent.
-- Experiment with different hyperparameters to (possibly) improve performance over the baseline in `agents.ipynb`.
-- Evaluate your AI Agent.
+- Explore the accompanying agents guides (`guides/router_agents_guide.ipynb` and `guides/tool_agents_guide.ipynb`).
+- Use LangGraph to create a simple `router` agent *OR* tool-using LLM Agent in the `assignments/agents.ipynb` notebook.
+- Experiment with different techniques covered in the course to (possibly) improve performance over the baseline in `router_agents.ipynb` or `tool_agents.ipynb`.
+- Evaluate your AI Agent - or at least comment on how you would evaluate it.
 - Briefly reflect on the performance of your system and your choices of preprocessing, hyperparameters etc.
     - Write your analysis as a markdown cell in the bottom of the notebook.
 
