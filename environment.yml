@@ -4,23 +4,33 @@ channels:
   - https://repo.anaconda.com/pkgs/main
   - https://repo.anaconda.com/pkgs/r
 dependencies:
-  - ipywidgets=8.1.5
-  - langchain-community=0.3.20
-  - markdown=3.6
-  - matplotlib=3.10.1
-  - nbformat=5.10.4
-  - pip=25.0.1
-  - pre-commit=4.2.0
-  - python=3.11.11
-  - python-decouple=3.8
-  - tqdm=4.67.1
-  - unstructured=0.17.2
+  - python=3.11
+  - ipykernel
+  - ipython
+  - ipywidgets
+  - jupyter
+  - langchain-community
+  - markdown
+  - markupsafe
+  - matplotlib
+  - nbclient
+  - nbformat
+  - pip
+  - pre-commit
+  - python-decouple
+  - scikit-learn
+  - tqdm
   - pip:
-      - instructor==1.7.7
-      - langchain==0.3.21
-      - langchain-chroma==0.2.2
-      - langchain-ibm==0.3.8
-      - langchain-text-splitters==0.3.7
-      - langgraph==0.3.18
-      - litellm==1.63.14
-prefix: aiml25-ma3
+      - chromadb
+      - duckduckgo-search
+      - ibm-watsonx-ai
+      - instructor
+      - langchain
+      - langchain-chroma
+      - langchain-core
+      - langchain-ibm
+      - langchain-text-splitters
+      - langgraph
+      - litellm
+      - pandas
+      - requests
