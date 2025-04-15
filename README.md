@@ -5,7 +5,7 @@
 ### Group members
 | Student name | Student ID |
 | --- | --- |
-| #NAME# | #ID# |
+| Claudio Thumm | 173663 |
 | #NAME# | #ID# |
 | #NAME# | #ID# |
 
