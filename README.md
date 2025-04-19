@@ -6,8 +6,8 @@
 | Student name | Student ID |
 | --- | --- |
 | Claudio Thumm | 173663 |
-| #NAME# | #ID# |
-| #NAME# | #ID# |
+| Nikolaos Tsatsampas  | 172760 |
+| Petyo Zhechev | 157382 |
 
 ***
 
